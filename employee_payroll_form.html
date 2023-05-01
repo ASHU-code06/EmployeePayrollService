@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <title>Employee Payroll Form</title>
     <style>
-      .center {
+      #centerBox {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        height: 100vh;
+        margin-top: 50px;
       }
-      .box {
-        background-color: #f1f1f1;
-        border-radius: 10px;
-        padding: 20px;
-        width: 400px;
-      }
-      h2 {
-        text-align: center;
+      #formHeader {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
       }
       label {
-        display: block;
-        margin-bottom: 10px;
+        margin-right: 10px;
       }
-      input[type="text"],
-      input[type="file"] {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border: none;
-        border-radius: 4px;
-      }
-      input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      input[type="submit"]:hover {
-        background-color: #45a049;
+      #profilePic {
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
-    <h1 style="text-align: center">Employee Payroll</h1>
-    <div class="center">
-      <div class="box">
-        <h2>Employee Payroll Form</h2>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="profile-pic">Profile Picture:</label>
-          <input type="file" id="profile-pic" name="profile-pic">
-
-          <input type="submit" value="Submit">
-        </form>
-      </div>
+    <header>
+      <h1>Employee Payroll</h1>
+    </header>
+    <div id="centerBox">
+      <h2 id="formHeader">Employee Payroll Form</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="profilePic">Profile Pic:</label>
+        <input type="file" id="profilePic" name="profilePic"><br><br>
+        <label>Gender:</label>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female"><br><br>
+        <label for="department">Department:</label>
+        <label for="sales">Sales</label>
+        <input type="checkbox" id="sales" name="department" value="sales">
+        <label for="marketing">Marketing</label>
+        <input type="checkbox" id="marketing" name="department" value="marketing">
+        <label for="engineering">Engineering</label>
+        <input type="checkbox" id="engineering" name="department" value="engineering"><br><br>
+        <label for="salary">Salary:</label>
+        <input type="range" id="salary" name="salary" min="0" max="100000" step="1000"><br><br>
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </body>
 </html>
+
 
 
